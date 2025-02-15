@@ -3,53 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para Meu Amor 💖</title>
+    <title>Seis Meses De Nós</title>
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
             text-align: center;
             font-family: 'Poppins', sans-serif;
-            background-color: #FDEBD0; /* Cor de fundo suave */
-            padding: 20px;
-            margin: 0;
+            background-color: #F2F0CC; 
+            padding: 20px; 
         }
 
-        h1 {
+        h1, h2, p {
             color: #800000; /* Maroon */
+            border: none;
         }
 
-        h2, p {
-            color: #800000; /* Maroon */
+        /* Estilo da seção inicial */
+        .intro-section {
+            display: block;
+            background-color: #ff4f7a;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
         }
 
-        .container {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            display: inline-block;
-            width: 100%;
-            box-sizing: border-box;
+        .intro-button {
+            background-color: #ff4f7a;
+            color: white;
+            padding: 15px 25px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s;
         }
 
+        .intro-button:hover {
+            background-color: #ff2e5f;
+            transform: scale(1.1);
+        }
+
+        /* Estilo da página principal */
+        .main-content {
+            display: none;
+            margin-top: 20px;
+        }
+
+        /* Estilo do conteúdo principal (apenas visível após clicar no botão) */
         .gallery {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between; /* Distribuir igualmente as imagens */
+            justify-content: center;
             margin-bottom: 20px;
         }
 
         .gallery img {
-            width: 18%; /* Definindo a largura das imagens para 5 por linha */
-            height: auto;
+            width: 150px;
+            height: 150px;
+            margin: 10px;
             border-radius: 10px;
-            margin-bottom: 10px;
             cursor: pointer;
             transition: transform 0.3s;
         }
 
         .gallery img:hover {
-            transform: scale(1.1);
+            transform: scale(1.2);
         }
 
         .message-box {
@@ -60,124 +80,47 @@
             border-radius: 10px;
             background-color: #F2F2FF;
         }
-
-        .love-button {
-            display: inline-block;
-            background: #ff4f7a;
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
-            padding: 12px 24px;
-            border-radius: 30px;
-            text-decoration: none;
-            transition: 0.3s;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            margin-top: 20px;
-        }
-
-        .love-button:hover {
-            background: #ff2e5f;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-            transform: scale(1.1);
-        }
-
-        .another-page {
-            display: none;
-        }
-
-        .another-page.active {
-            display: block;
-            background-color: #f4f4f4;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 10px;
-            color: #333;
-        }
     </style>
 </head>
 <body>
+    <!-- Seção inicial com o botão -->
+    <section class="intro-section">
+        <h1>Bem-vindo ao meu presente de seis meses... ❤️</h1>
+        <p>Para uma surpresa especial, clique no botão abaixo!</p>
+        <!-- Botão para mostrar o conteúdo principal -->
+        <a href="javascript:void(0);" class="intro-button" onclick="showMainContent()">💌 Clique aqui, meu amor 💌</a>
+    </section>
 
-    <!-- Primeira parte com a mensagem -->
-    <div class="container">
-        <h1>Para Meu Amor ❤️</h1>
-        <section class="message-box">
-            <p>Não imaginei que eu pudesse amar tanto uma pessoa... Saiba que eu não trocaria nossos momentos juntos para ter novas experiências. Eu passei minha vida inteira buscando alguém que me tratasse como uma princesa e agora que eu te achei, meu príncipe, não ache que eu vou te deixar ir tão fácil. Te amo!!</p>
-        </section>
+    <!-- Conteúdo principal da página (inicialmente oculto) -->
+    <section class="main-content" id="mainContent">
+        <header>
+            <h1>Para Meu Amor ❤️</h1>
+        </header>
+        
+        <main>
+            <section class="message-box">
+                <p>Não imaginei que eu pudesse amar tanto uma pessoa... Saiba que eu não trocaria nossos momentos juntos
+    para ter novas experiências. Eu passei minha vida inteira buscando alguém que me tratasse como uma princesa e agora
+    que eu te achei, meu príncipe, não ache que eu vou te deixar ir tão fácil. Te amo!!</p>
+            </section>
 
-        <section class="gallery">
-            <img src="01e2619f-bb08-45a0-b121-be6f97496771.jpg" alt="Se amar assim for brega, Me chama de Marília Mendonça"/>
-            <img src="097d0554-4fd0-4e9c-836c-420aefd5f2e7.jpg" alt="Se o amor bateu na nossa porta, que sorte a nossa!"/>
-            <img src="bb2f4df2-68cd-4dba-804b-fdb82bdba741.jpg" alt="Tantos sorrisos por aí, você querendo o meu. Tantos olhares me olhando e eu querendo o seu."/>
-            <img src="48CD2D04-0509-4791-A057-B0C4EC2776A3.jpg" alt="Nem que seja além dessa vida... Eu vou estar Te esperando"/>
-            <img src="IMG_9138.jpg" alt="Amar não é pecado, e se estiver errado e que se dane o mundo eu só quero você."/>
-        </section>
+            <section class="gallery">
+                <!-- Imagens aqui -->
+            </section>
 
-        <section class="message-box">
-            <p>Se algum dia você duvidar do quão grande é meu amor, saiba que ele é tão grande que ultrapassa fronteiras.</p>
-        </section>
-
-        <!-- Galeria de imagens com 5 imagens por linha -->
-        <section class="gallery">
-            <img src="IMG-20250208-WA1309.jpg" alt="Nosso amor chegou até Pernambuco"/>
-            <img src="IMG-20250208-WA0705.jpg" alt="Nosso amor chegou até Rio Grande do Norte"/>
-            <img src="IMG-20250208-WA0904.jpg" alt="Nosso amor chegou até Alagoas"/>
-            <img src="IMG_20250208_135037.jpg" alt="Nosso amor chegou até Maranhão"/>
-            <img src="IMG-20250208-WA0693.jpg" alt="Nosso amor chegou até Sergipe"/>
-        </section>
-
-        <section class="gallery">
-            <img src="IMG-20250208-WA1742.jpg" alt="Nosso amor chegou até Piauí"/>
-            <img src="IMG-20250209-WA0850.jpg" alt="Nosso amor chegou até Amapá"/>       
-            <img src="IMG-20250210-WA0130.jpg" alt="Nosso amor chegou até Pará"/>
-            <img src="IMG-20250208-WA0924.jpg" alt="Nosso amor chegou até Acre"/>
-            <img src="IMG-20250208-WA0751.jpg" alt="Nosso amor chegou até Amazonas"/>
-        </section>
-
-        <section class="gallery">
-            <img src="IMG-20250209-WA0582.jpg" alt="Nosso amor chegou até Rondônia"/>
-            <img src="IMG-20250208-WA1710.jpg" alt="Nosso amor chegou até Roraima"/>
-            <img src="IMG-20250208-WA0417.jpg" alt="Nosso amor chegou até Goiás"/>
-            <img src="IMG-20250208-WA0554.jpg" alt="Nosso amor chegou até Mato Grosso"/>
-            <img src="IMG-20250208-WA0657.jpg" alt="Nosso amor chegou até Mato Grosso do Sul"/>
-        </section>
-
-        <section class="gallery">
-            <img src="IMG-20250208-WA0670.jpg" alt="Nosso amor chegou até Espírito Santo"/>
-            <img src="IMG-20250208-WA1273.jpg" alt="Nosso amor chegou até Distrito Federal"/>
-            <img src="IMG-20250208-WA1165.jpg" alt="Nosso amor chegou até São Paulo"/>
-            <img src="IMG-20250208-WA0514.jpg" alt="Nosso amor chegou até São Paulo, Sorocaba né"/>
-            <img src="IMG-20250208-WA0823.jpg" alt="Nosso amor chegou até Minas Gerais"/>
-        </section>
-
-        <section class="message-box">
-            <p>Esse amor não ficou só no Brasil...</p>
-        </section>
-
-        <section class="gallery">
-            <img src="IMG-20250209-WA0796.jpg" alt="Chegou em Portugal"/>
-            <img src="IMG-20250209-WA0842.jpg" alt="Chegou no Canadá"/>
-        </section>
-
-        <section class="message-box">
-            <p>Te amoo!!</p>
-        </section>
-
-        <!-- Botão para revelar a outra parte da página -->
-        <a href="#" class="love-button" onclick="showAnotherPage()">💌 Clique aqui para mais 💌</a>
-    </div>
-
-    <div class="another-page" id="anotherPage">
-        <h2>Bem-vindo à outra parte! 😍</h2>
-        <p>Esta é a continuação do nosso amor! Mais momentos para compartilhar!</p>
-    </div>
+        </main>
+    </section>
 
     <script>
-        function showAnotherPage() {
-            document.getElementById('anotherPage').classList.toggle('active');
+        // Função para exibir o conteúdo principal após o clique no botão
+        function showMainContent() {
+            // Esconde a seção inicial e mostra o conteúdo principal
+            document.querySelector('.intro-section').style.display = 'none';
+            document.getElementById('mainContent').style.display = 'block';
         }
     </script>
-
 </body>
 </html>
+
 
 
