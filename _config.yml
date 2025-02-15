@@ -1,0 +1,6 @@
+title: Seis Meses
+description:uma forma de te mostrar meu amor
+baseurl: "" 
+url: "http://iloveyou:4000" 
+theme: jekyll-theme-love
+markdown: kramdown
