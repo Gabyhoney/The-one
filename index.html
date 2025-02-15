@@ -9,12 +9,11 @@
         body {
             text-align: center;
             font-family: 'Poppins', sans-serif;
-            background-color: #FDEBD0; /* Cor de fundo suave, como areia clara */
+            background-color: #FDEBD0; /* Cor de fundo suave */
             padding: 20px;
             margin: 0;
         }
 
-        /* Título em maroon */
         h1 {
             color: #800000; /* Maroon */
         }
@@ -29,21 +28,22 @@
             border-radius: 15px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
         }
 
-        /* Estilos para a galeria de imagens com aumento de tamanho */
         .gallery {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px; /* Espaço entre as imagens */
+            justify-content: space-between; /* Distribuir igualmente as imagens */
             margin-bottom: 20px;
         }
 
         .gallery img {
-            width: 300px; /* Aumentando o tamanho das imagens */
-            height: 300px;
+            width: 18%; /* Definindo a largura das imagens para 5 por linha */
+            height: auto;
             border-radius: 10px;
+            margin-bottom: 10px;
             cursor: pointer;
             transition: transform 0.3s;
         }
@@ -61,7 +61,6 @@
             background-color: #F2F2FF;
         }
 
-        /* Estilo do botão */
         .love-button {
             display: inline-block;
             background: #ff4f7a;
@@ -73,6 +72,7 @@
             text-decoration: none;
             transition: 0.3s;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
         }
 
         .love-button:hover {
@@ -110,7 +110,6 @@
             <img src="bb2f4df2-68cd-4dba-804b-fdb82bdba741.jpg" alt="Tantos sorrisos por aí, você querendo o meu. Tantos olhares me olhando e eu querendo o seu."/>
             <img src="48CD2D04-0509-4791-A057-B0C4EC2776A3.jpg" alt="Nem que seja além dessa vida... Eu vou estar Te esperando"/>
             <img src="IMG_9138.jpg" alt="Amar não é pecado, e se estiver errado e que se dane o mundo eu só quero você."/>
-            <img src="IMG_0831.jpg" alt="A culpa é sua por ter esse sorriso. Ou a culpa é minha por me apaixonar por ele?"/>
         </section>
 
         <section class="message-box">
